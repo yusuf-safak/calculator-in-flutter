@@ -22,21 +22,15 @@ class _CalculatorState extends State<Calculator> {
     if(buttonValue == "AC"){
       resultValue = "";
       history = "";
-      setState(() {
-        result = resultValue;
-      });
+      setState(() {result = resultValue;});
     }
     else if(buttonValue == "C"){
       resultValue = "";
-      setState(() {
-        result = resultValue;
-      });
+      setState(() {result = resultValue;});
     }
     else if(buttonValue == "BACK"){
       resultValue = resultValue.substring(0,resultValue.length-1);
-      setState(() {
-        result = resultValue;
-      });
+      setState(() {result = resultValue;});
     }
     else if(buttonValue == "+/-"){
       if(int.parse(resultValue)>0)
@@ -46,48 +40,36 @@ class _CalculatorState extends State<Calculator> {
       }
       else
         resultValue = resultValue.substring(1);
-      setState(() {
-        result = resultValue;
-      });
+      setState(() {result = resultValue;});
     }
     else if(buttonValue == "/"){
       number1 = int.parse(resultValue);
       resultValue= "";
-      setState(() {
-        result = resultValue;
-      });
+      setState(() {result = resultValue;});
       process = buttonValue;
     }
     else if(buttonValue == "x"){
       number1 = int.parse(resultValue);
       resultValue= "";
-      setState(() {
-        result = resultValue;
-      });
+      setState(() {result = resultValue;});
       process = buttonValue;
     }
     else if(buttonValue == "-"){
       number1 = int.parse(resultValue);
       resultValue= "";
-      setState(() {
-        result = resultValue;
-      });
+      setState(() {result = resultValue;});
       process = buttonValue;
     }
     else if(buttonValue == "+"){
       number1 = int.parse(resultValue);
       resultValue= "";
-      setState(() {
-        result = resultValue;
-      });
+      setState(() {result = resultValue;});
       process = buttonValue;
     }
     else if(buttonValue == "="){
       number2 = int.parse(resultValue);
       resultValue = "";
-      setState(() {
-        result = resultValue;
-      });
+      setState(() {result = resultValue;});
       if(process == "+")
       {
         resultValue = (number1 + number2).toString();
@@ -113,9 +95,7 @@ class _CalculatorState extends State<Calculator> {
     }
     else{
       result = int.parse(resultValue + buttonValue).toString();
-      setState(() {
-        resultValue = result;
-      });
+      setState(() {result = resultValue;});
     }
   }
   @override
